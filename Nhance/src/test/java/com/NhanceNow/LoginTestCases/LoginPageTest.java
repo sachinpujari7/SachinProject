@@ -60,7 +60,7 @@ public class LoginPageTest extends BaseClass
 		String expectedurl="https://dev.nhancenow.com/nhance-web-admin/dashboard";
 		
 		if(actualurl.equals(expectedurl))
-			test.pass("user is succesfully loged in");
+			test.pass("user is succesfully loged in ");
 		else
 			test.fail("user is not logged in");
 		Assert.assertEquals(actualurl, expectedurl);

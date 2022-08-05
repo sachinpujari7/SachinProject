@@ -7,14 +7,14 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.NhanceNow.BotTestCases.FlowBuilderPageTest">
+			<class name="com.NhanceNow.LoginTestCases.LoginPageTest">
 				<methods>
 					<include name="tearDown" />
 					<include name="loadConfig" />
 					<include name="afterSuite" />
 					<include name="setup" />
-					<include name="VerifySearchByName" />
-					<include name="VerifyFlowBuilderBtn" />
+					<include name="logintest" />
+					
 				</methods>
 			</class>
 		</classes>

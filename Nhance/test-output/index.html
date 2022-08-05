@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\IDS078\eclipse-workspace\Nhance\ToRunSingleMethod.xml</span>
+                    <span>C:\Users\IDS078\git\SachinProject\Nhance\ToRunSingleMethod.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,26 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.NhanceNow.BotTestCases.FlowBuilderPageTest" class="method navigator-link" hash-for-method="VerifyFlowBuilderBtn">VerifyFlowBuilderBtn</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.NhanceNow.LoginTestCases.LoginPageTest" class="method navigator-link" hash-for-method="logintest(sachinm@yopmail.com, aaA@123)">logintest(sachinm@yopmail.com, aaA@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.NhanceNow.BotTestCases.FlowBuilderPageTest" class="method navigator-link" hash-for-method="VerifySearchByName">VerifySearchByName</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.NhanceNow.LoginTestCases.LoginPageTest" class="method navigator-link" hash-for-method="logintest(chielectro@yopmail.com, aaA@123)">logintest(chielectro@yopmail.com, aaA@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.NhanceNow.LoginTestCases.LoginPageTest" class="method navigator-link" hash-for-method="logintest(gupshuptest@yopmail.com, Abc@123)">logintest(gupshuptest@yopmail.com, Abc@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,32 +129,80 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.NhanceNow.BotTestCases.FlowBuilderPageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.NhanceNow.LoginTestCases.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifyFlowBuilderBtn">
-                  </a> <!-- VerifyFlowBuilderBtn -->
-                  <span class="method-name">VerifyFlowBuilderBtn</span>
+                  <a name="logintest(sachinm@yopmail.com, aaA@123)">
+                  </a> <!-- logintest(sachinm@yopmail.com, aaA@123) -->
+                  <span class="method-name">logintest</span>
+                  <span class="parameters">(sachinm@yopmail.com, aaA@123)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [https://dev.nhancenow.com/nhance-web-admin/dashboard] but found [https://dev.nhancenow.com/nhance-web-admin/auth/login]
+	at com.NhanceNow.LoginTestCases.LoginPageTest.logintest(LoginPageTest.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifySearchByName">
-                  </a> <!-- VerifySearchByName -->
-                  <span class="method-name">VerifySearchByName</span>
+                  <a name="logintest(chielectro@yopmail.com, aaA@123)">
+                  </a> <!-- logintest(chielectro@yopmail.com, aaA@123) -->
+                  <span class="method-name">logintest</span>
+                  <span class="parameters">(chielectro@yopmail.com, aaA@123)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [https://dev.nhancenow.com/nhance-web-admin/dashboard] but found [https://dev.nhancenow.com/nhance-web-admin/auth/login]
+	at com.NhanceNow.LoginTestCases.LoginPageTest.logintest(LoginPageTest.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logintest(gupshuptest@yopmail.com, Abc@123)">
+                  </a> <!-- logintest(gupshuptest@yopmail.com, Abc@123) -->
+                  <span class="method-name">logintest</span>
+                  <span class="parameters">(gupshuptest@yopmail.com, Abc@123)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;otp&apos;]&quot;}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;LAPTOP-FKS8PH8H&apos;, ip: &apos;192.168.165.47&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bc5dc47d75b5db168370a60cc5b69889, findElement {using=name, value=otp}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\IDS078\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49874}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49874/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bc5dc47d75b5db168370a60cc5b69889
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
+	at com.NhanceNow.Pageobjects.LoginPage.twostepverification(LoginPage.java:74)
+	at com.NhanceNow.LoginTestCases.LoginPageTest.logintest(LoginPageTest.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\IDS078\eclipse-workspace\Nhance\ToRunSingleMethod.xml</span>
+            <span class="header-content">C:\Users\IDS078\git\SachinProject\Nhance\ToRunSingleMethod.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -161,16 +214,15 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.NhanceNow.BotTestCases.FlowBuilderPageTest&quot;&gt;
+      &lt;class name=&quot;com.NhanceNow.LoginTestCases.LoginPageTest&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;tearDown&quot;/&gt;
           &lt;include name=&quot;loadConfig&quot;/&gt;
           &lt;include name=&quot;afterSuite&quot;/&gt;
           &lt;include name=&quot;setup&quot;/&gt;
-          &lt;include name=&quot;VerifySearchByName&quot;/&gt;
-          &lt;include name=&quot;VerifyFlowBuilderBtn&quot;/&gt;
+          &lt;include name=&quot;logintest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.NhanceNow.BotTestCases.FlowBuilderPageTest --&gt;
+      &lt;/class&gt; &lt;!-- com.NhanceNow.LoginTestCases.LoginPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -210,20 +262,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifySearchByName')
-data.setCell(0, 2, 'com.NhanceNow.BotTestCases.FlowBuilderPageTest')
-data.setCell(0, 3, 10470);
+data.setCell(0, 1, 'logintest')
+data.setCell(0, 2, 'com.NhanceNow.LoginTestCases.LoginPageTest')
+data.setCell(0, 3, 10288);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifyFlowBuilderBtn')
-data.setCell(1, 2, 'com.NhanceNow.BotTestCases.FlowBuilderPageTest')
-data.setCell(1, 3, 9103);
+data.setCell(1, 1, 'logintest')
+data.setCell(1, 2, 'com.NhanceNow.LoginTestCases.LoginPageTest')
+data.setCell(1, 3, 7626);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'logintest')
+data.setCell(2, 2, 'com.NhanceNow.LoginTestCases.LoginPageTest')
+data.setCell(2, 3, 4954);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -238,9 +294,42 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.NhanceNow.LoginTestCases.LoginPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ErrorMsgForBlankPswd</span>
+                <br/>
+                <span class="ignored-method-name">forgotpassword</span>
+                <br/>
+                <span class="ignored-method-name">logoisdisplayed</span>
+                <br/>
+                <span class="ignored-method-name">verifySigninBtnWithBlankUN</span>
+                <br/>
+                <span class="ignored-method-name">loginTestWithInvalidPswd</span>
+                <br/>
+                <span class="ignored-method-name">usernametxtbxiseditable</span>
+                <br/>
+                <span class="ignored-method-name">verifyPageTitle</span>
+                <br/>
+                <span class="ignored-method-name">VerifyResendOtpButtonOnTwoStepVerification</span>
+                <br/>
+                <span class="ignored-method-name">pswdtxtbxiseditable</span>
+                <br/>
+                <span class="ignored-method-name">LoginTestWithInvalidUN</span>
+                <br/>
+                <span class="ignored-method-name">ErrorMsgForBlankUN</span>
+                <br/>
+                <span class="ignored-method-name">logintestWithoutDataprovider</span>
+                <br/>
+                <span class="ignored-method-name">verifySigninBtnWithBlankPswd</span>
+                <br/>
+                <span class="ignored-method-name">VerifyErrorMsgForInvalidLoginDetails</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -249,38 +338,56 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.NhanceNow.BotTestCases.FlowBuilderPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.NhanceNow.LoginTestCases.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">loadConfig</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">212 ms</span>
+                <span class="method-start">1620 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifySearchByName</span>
-                <span class="method-start">10867 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">logintest(sachinm@yopmail.com, aaA@123)</span>
+                <span class="method-start">13573 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21340 ms</span>
+                <span class="method-start">21376 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">21522 ms</span>
+                <span class="method-start">21654 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifyFlowBuilderBtn</span>
-                <span class="method-start">26491 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">logintest(chielectro@yopmail.com, aaA@123)</span>
+                <span class="method-start">28469 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">35595 ms</span>
+                <span class="method-start">33566 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">33874 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">logintest(gupshuptest@yopmail.com, Abc@123)</span>
+                <span class="method-start">42162 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52562 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">35772 ms</span>
+                <span class="method-start">52836 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
