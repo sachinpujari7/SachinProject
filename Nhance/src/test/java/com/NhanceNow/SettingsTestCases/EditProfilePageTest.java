@@ -106,7 +106,7 @@ public class EditProfilePageTest extends BaseClass
 		signin.twostepverification(prop.getProperty("OTP"), homepage);
 		homepage.settings();
 		setting.EditProfileButton();
-		boolean b=edit.BrowseButton();
+		boolean b=edit.BrowseButton(prop.getProperty("ProfileImagePath"));
 		if(b)
 			test.pass("Browse button is working and profile image is uploaded");
 		Assert.assertTrue(b);

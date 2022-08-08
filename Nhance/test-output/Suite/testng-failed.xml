@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.NhanceNow.LoginTestCases.LoginPageTest">
+      <class name="com.NhanceNow.BotTestCases.FlowBuilderPageTest">
         <methods>
-          <include name="logintest" invocation-numbers="0 1 2"/>
+          <include name="VerifySearchByName"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="loadConfig"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.NhanceNow.LoginTestCases.LoginPageTest -->
+      </class> <!-- com.NhanceNow.BotTestCases.FlowBuilderPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

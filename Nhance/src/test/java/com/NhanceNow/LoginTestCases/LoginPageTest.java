@@ -85,6 +85,7 @@ public class LoginPageTest extends BaseClass
 			test.fail("user is not logged in");
 		Assert.assertEquals(actualurl, expectedurl);
 	}
+	
 	@Test
 	public void forgotpassword()
 	{

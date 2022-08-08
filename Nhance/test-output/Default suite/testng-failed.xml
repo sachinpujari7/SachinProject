@@ -10,6 +10,7 @@
           <include name="tearDown"/>
           <include name="loadConfig"/>
           <include name="afterSuite"/>
+          <include name="VerifyFlowBuilderBtn"/>
         </methods>
       </class> <!-- com.NhanceNow.BotTestCases.FlowBuilderPageTest -->
     </classes>

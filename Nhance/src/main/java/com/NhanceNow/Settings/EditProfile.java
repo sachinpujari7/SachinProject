@@ -149,13 +149,13 @@ public class EditProfile extends BaseClass
 		return ChangeMobilePageText.isDisplayed();
 	}
 	
-	public boolean BrowseButton() throws InterruptedException, AWTException
+	public boolean BrowseButton(String path) throws InterruptedException, AWTException
 	{
 		ProfileDelete.click();
 		Thread.sleep(1000);
         BrowseBtn.click();
 		Thread.sleep(2000);
-		action.RobotClass("C:\\Users\\IDS078\\Desktop\\NhanceTestData\\profile.jpg");
+		action.RobotClass(path);
 		action.explicitWait(driver, ProfileIcon, 10);
 		return ProfileIcon.isDisplayed();
 	}

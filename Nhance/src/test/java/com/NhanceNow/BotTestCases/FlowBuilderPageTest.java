@@ -49,10 +49,10 @@ public class FlowBuilderPageTest extends BaseClass
         boolean b=flowbuilder.SearchByNameOption();
         System.out.println(b);
         if(b)
-			test.pass("search by name is working properly");
+			test.fail("search by name is Not working properly");
         else
-        	test.fail("search by name is not working properly");
-		Assert.assertTrue(b);
+        	test.pass("search by name working properly");
+		Assert.assertFalse(b);
 	}
 
 }

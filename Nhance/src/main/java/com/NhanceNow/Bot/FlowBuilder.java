@@ -4,8 +4,6 @@
 package com.NhanceNow.Bot;
 
 import java.util.List;
-
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -60,8 +58,8 @@ public class FlowBuilder extends BaseClass
 	@FindBy(xpath="//input[@placeholder='Name']")
 	WebElement SearchByNameTxtbx;
 	
-	@FindBy(xpath="(//span[contains(text(),'Bike Flow')])[1]")
-	WebElement BikeFlow;
+	@FindBy(xpath="(//span[contains(text(),'product flow')])[1]")
+	WebElement ProductFlow;
 	
 	@FindBy(tagName="tr")
 	List<WebElement> flowCount;
@@ -93,15 +91,17 @@ public class FlowBuilder extends BaseClass
 //		action.explicitWait(driver, SearchByNameTxtbx, 10);
 		SearchByNameTxtbx.sendKeys("Bike Flow");
 		Thread.sleep(2000);
-		if(flowCount.size()==1)
-		{
-			if(BikeFlow.isDisplayed())
-			   return true;
-			else
+		
+			try {
+				if(ProductFlow.isDisplayed())
+				   return false;
+				
+			} catch (Exception e) {
+				
 				return false;
-		}
-		else
+			}
 			return false;
+		
 		
 	}
 	

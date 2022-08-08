@@ -16,7 +16,7 @@ public class DataProviders
 	ExcelLibrary excel=new ExcelLibrary();
 	
 	@DataProvider(name = "credentials")
-	public Object[][] getCredentials() {
+	public Object[][] getLoginCredentials() {
 		// Totals rows count
 		int rows = excel.getRowCount("LoginCredentials");
 		// Total Columns
